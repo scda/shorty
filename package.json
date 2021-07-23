@@ -13,6 +13,8 @@
     "onCommand:shorty.amazon"
   ],
   "main": "./out/extension.js",
+  "publisher": "scda",
+  "repository": "https://github.com/scda/shorty",
   "contributes": {
     "commands": [
       {
