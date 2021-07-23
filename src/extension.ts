@@ -26,7 +26,8 @@ export function activate(context: vscode.ExtensionContext) {
     const document = editor.document;
     if (!document) return;
 
-    const text = document.getText();
+    const selection = editor.selection;
+    const text = document.getText(selection);
 
     if (!text) return;
 
@@ -38,11 +39,8 @@ export function activate(context: vscode.ExtensionContext) {
 
     const newText = newLines.join("\n");
 
-    var firstLine = document.lineAt(0);
-    var lastLine = document.lineAt(document.lineCount - 1);
-    var fullRange = new vscode.Range(firstLine.range.start, lastLine.range.end);
     editor.edit((editBuilder) => {
-      editBuilder.replace(fullRange, newText);
+      editBuilder.replace(selection, newText);
     });
   });
 
