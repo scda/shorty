@@ -1,26 +1,50 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+"use strict";
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
-	
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "shorty" is now active!');
+import * as vscode from "vscode";
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('shorty.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from shorty!');
-	});
+function cleanupAmazonUrl(url: string) {
+  let searchExpression = new RegExp("((https?://(www|smile)?.?)?amazon.de/)[^/]*/?(dp/[^/]*)");
+  var matches = url.match(searchExpression);
+  if (matches == null) {
+    return url;
+  }
 
-	context.subscriptions.push(disposable);
+  let results = Array.from(matches);
+  if (results == null) {
+    return url;
+  }
+
+  return results[1] + results[4];
 }
 
-// this method is called when your extension is deactivated
-export function deactivate() {}
+export function activate(context: vscode.ExtensionContext) {
+  const disposable = vscode.commands.registerCommand("shorty.amazon", function () {
+    // Get the active text editor
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) return;
+
+    const document = editor.document;
+    if (!document) return;
+
+    const text = document.getText();
+
+    if (!text) return;
+
+    let newLines: string[] = [];
+    let lines = text.split("\n");
+    for (let line of lines) {
+      newLines.push(cleanupAmazonUrl(line));
+    }
+
+    const newText = newLines.join("\n");
+
+    var firstLine = document.lineAt(0);
+    var lastLine = document.lineAt(document.lineCount - 1);
+    var fullRange = new vscode.Range(firstLine.range.start, lastLine.range.end);
+    editor.edit((editBuilder) => {
+      editBuilder.replace(fullRange, newText);
+    });
+  });
+
+  context.subscriptions.push(disposable);
+}
