@@ -19,7 +19,11 @@ https://www.amazon.de/dp/B08LR3G17D/ref=gw_de_desk_mso_vicc_grc_bau_xcat1?pf_rd_
 https://www.amazon.de/HOMEFAVOR-Herausnehmbarer-Galvanisierung-Regenbogenfarbe-Brotzeitdose/dp/B08GKFRPQS/ref=sr_1_19?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2H95X6OUCGRXZ&keywords=brotdose&qid=1656078648&sprefix=brotdos%2Caps%2C103&sr=8-19&th=1
 https://www.amazon.de/Morbius-Blu-ray-Jared-Leto/dp/B09WRTL2TK/?_encoding=UTF8&pd_rd_w=bQB86&content-id=amzn1.sym.334f809e-3300-40ce-8741-870dea477993&pf_rd_p=334f809e-3300-40ce-8741-870dea477993&pf_rd_r=43XXHB6JXJS7YDHPP6DK&pd_rd_wg=H7hu2&pd_rd_r=b82a7ecb-1529-441d-b897-3572864b6b49&ref_=pd_gw_crs_zg_bs_284266
 https://www.amazon.de/SanDisk-256GB-iXpand-Flash-Laufwerk-iPhone/dp/B07VQPDM56?ref_=ast_sto_dp
-https://www.amazon.de/verstellbarer-stander-fur-echo-show-5-2-gen/dp/B08MGX9X3K/?pf_rd_r=43XXHB6JXJS7YDHPP6DK&pf_rd_p=73bd4b07-8bcc-458b-8951-0fd9aa76b2f7&pd_rd_r=40ed4323-24d1-4cef-88d0-8b4df55d8766&pd_rd_w=Qwwvd&pd_rd_wg=E1v8b&ref_=pd_gw_unk`
+https://www.amazon.de/verstellbarer-stander-fur-echo-show-5-2-gen/dp/B08MGX9X3K/?pf_rd_r=43XXHB6JXJS7YDHPP6DK&pf_rd_p=73bd4b07-8bcc-458b-8951-0fd9aa76b2f7&pd_rd_r=40ed4323-24d1-4cef-88d0-8b4df55d8766&pd_rd_w=Qwwvd&pd_rd_wg=E1v8b&ref_=pd_gw_unk
+https://www.amazon.de/gp/product/B079V367MM/ref=ox_sc_act_title_1?smid=A3JWKAKR8XB7XF&psc=1
+https://www.amazon.de/gp/product/B079QFKJ13/ref=ox_sc_act_title_2?smid=A3JWKAKR8XB7XF&psc=1
+https://www.amazon.de/gp/product/B07W4DGC27/ref=ox_sc_act_title_3?smid=A3JWKAKR8XB7XF&psc=1
+https://www.amazon.de/gp/product/B07W5JHLCB/ref=ox_sc_act_title_4?smid=A3JWKAKR8XB7XF&psc=1`
 
 var amazonLinksReduced = `amazon.de/dp/B01NCEC2NT
 amazon.de/dp/B01NCEC2NT
@@ -35,14 +39,18 @@ https://www.amazon.de/dp/B08LR3G17D
 https://www.amazon.de/dp/B08GKFRPQS
 https://www.amazon.de/dp/B09WRTL2TK
 https://www.amazon.de/dp/B07VQPDM56
-https://www.amazon.de/dp/B08MGX9X3K`
+https://www.amazon.de/dp/B08MGX9X3K
+https://www.amazon.de/gp/product/B079V367MM
+https://www.amazon.de/gp/product/B079QFKJ13
+https://www.amazon.de/gp/product/B07W4DGC27
+https://www.amazon.de/gp/product/B07W5JHLCB`
 
 var randomOtherLinks = `https://go.dev/doc/tutorial/add-a-test
 https://go.dev/doc/diagnostics`
 
 var nonsenseString = `abcdefgN0ns3n$3`
 
-var mixedLinks = strings.Join([]string{amazonLinksRaw, randomOtherLinks}, "")
+var mixedLinks = strings.Join([]string{amazonLinksRaw, randomOtherLinks}, "\n")
 
 func Test_Replace_Should_Reduce_Content_With_Amazon_Links(t *testing.T) {
 	// arrange
@@ -58,10 +66,10 @@ func Test_Replace_Should_Reduce_Content_With_Amazon_Links(t *testing.T) {
 	}
 }
 
-func Test_Replace_Should_Reduce_Mixed_Content_With_Amazon_Links(t *testing.T) {
+func Test_Replace_Should_Reduce_Only_Amazon_Links_On_Mixed_Content(t *testing.T) {
 	// arrange
 	input := mixedLinks
-	expectedResult := amazonLinksReduced
+	expectedResult := strings.Join([]string{amazonLinksReduced, randomOtherLinks}, "\n")
 
 	// act
 	result, err := ReduceAmazonUrls(input)
@@ -72,10 +80,10 @@ func Test_Replace_Should_Reduce_Mixed_Content_With_Amazon_Links(t *testing.T) {
 	}
 }
 
-func Test_Replace_Should_Return_Empty_On_Content_Without_Amazon_Links(t *testing.T) {
+func Test_Replace_Should_Return_Input_On_Content_Without_Amazon_Links(t *testing.T) {
 	// arrange
 	input := randomOtherLinks
-	expectedResult := ""
+	expectedResult := randomOtherLinks
 
 	// act
 	result, err := ReduceAmazonUrls(input)
@@ -150,6 +158,7 @@ func Test_Main_Should_Update_Clipboard_On_Amazon_Links(t *testing.T) {
 func Test_Main_Should_Update_Clipboard_On_Mixed_Content(t *testing.T) {
 	// arrange
 	input := mixedLinks
+	expected := strings.Join([]string{amazonLinksReduced, randomOtherLinks}, "\n")
 	WriteClipboard(input)
 
 	// act
@@ -157,7 +166,7 @@ func Test_Main_Should_Update_Clipboard_On_Mixed_Content(t *testing.T) {
 
 	// assert
 	clipboardContent := ReadClipboard()
-	if clipboardContent != amazonLinksReduced {
+	if clipboardContent != expected {
 		t.Fatalf(`main() should have altered clipboard content. Result = %q. Expected result %#q`, clipboardContent, amazonLinksReduced)
 	}
 }
