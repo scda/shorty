@@ -7,7 +7,7 @@ import (
 	"golang.design/x/clipboard"
 )
 
-var regularExpression = regexp.MustCompile("((https?://(www|smile)?.?)?amazon.de/)[^/]*/?((dp|gp/product)/[^/^?]*)")
+var regularExpression = regexp.MustCompile("((https?://(www|smile)?.?)?amazon.de/).*/?((dp|gp/product)/[^/^?]*)")
 
 func ReduceAmazonUrls(input string) (string, error) {
 	results := []string{}
