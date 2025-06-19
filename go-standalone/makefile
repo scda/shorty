@@ -18,7 +18,7 @@ run:
 	go run $(MAIN_FILE)
 
 install:
-	go install
+	GOBIN=/Users/daniel/bin go install
 
 uninstall:
 	rm $$(go env GOPATH)/bin/shorty
