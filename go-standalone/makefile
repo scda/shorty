@@ -3,6 +3,9 @@ BINARY_NAME=shorty.out
 MAIN_FILE=main.go
 OUT_FILE=$(BUILD_DIR)/$(BINARY_NAME)
 
+KARABINER_CONFIG_FILE=karabiner-shorty.json
+KARABINER_CONFIG_PATH=$(HOME)/.config/karabiner/assets/complex_modifications/$(KARABINER_CONFIG_FILE)
+
 all: run
 
 deps: 
@@ -18,10 +21,12 @@ run:
 	go run $(MAIN_FILE)
 
 install:
-	GOBIN=/Users/daniel/bin go install
+	GOBIN=$(HOME)/bin go install
+	cp $(KARABINER_CONFIG_FILE) $(KARABINER_CONFIG_PATH)
 
 uninstall:
 	rm $$(go env GOPATH)/bin/shorty
+	rm $(KARABINER_CONFIG_PATH)
 
 clean:
 	go clean

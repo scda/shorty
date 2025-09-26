@@ -1,0 +1,27 @@
+{
+  "description": "Run Shorty URL Shortener",
+  "rules": [
+    {
+      "description": "Launch shorty URL shortener by shortcut",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/Users/daniel/bin/shorty"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

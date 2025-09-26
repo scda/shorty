@@ -13,3 +13,7 @@ look into the [makefile](./makefile) for more options. For example:
 
 - run the tool by executing `make` or `make run`
 - run tests by executing `make test`
+
+## installation
+- to be able to call the tool from your command line, run `make install`
+- to be able to call the tool with a a global shortcut, enable the script that was distributed via `make install` in Karabiner Elements.
