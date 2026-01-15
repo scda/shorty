@@ -19,14 +19,17 @@ https://www.amazon.de/Morbius-Blu-ray-Jared-Leto/dp/B09WRTL2TK/?_encoding=UTF8&p
 https://www.amazon.de/SanDisk-256GB-iXpand-Flash-Laufwerk-iPhone/dp/B07VQPDM56?ref_=ast_sto_dp
 https://www.amazon.de/verstellbarer-stander-fur-echo-show-5-2-gen/dp/B08MGX9X3K/?pf_rd_r=43XXHB6JXJS7YDHPP6DK&pf_rd_p=73bd4b07-8bcc-458b-8951-0fd9aa76b2f7&pd_rd_r=40ed4323-24d1-4cef-88d0-8b4df55d8766&pd_rd_w=Qwwvd&pd_rd_wg=E1v8b&ref_=pd_gw_unk
 https://www.amazon.de/gp/product/B079V367MM/ref=ox_sc_act_title_1?smid=A3JWKAKR8XB7XF&psc=1
-https://www.etsy.com/de/listing/4311408001/1516-zoll-eleganter-moderner-laptop?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=laptop+st%C3%A4nder&ref=sr_gallery-1-24&local_signal_search=1&content_source=616660b9-a24a-4be6-981d-cb20aa90650c%253ALTfde0873dc95278fcadd0e34ecdb9ee1d4de94ca8&organic_search_click=1&logging_key=616660b9-a24a-4be6-981d-cb20aa90650c%3ALTfde0873dc95278fcadd0e34ecdb9ee1d4de94ca8
 https://www.amazon.de/gp/product/B079QFKJ13/ref=ox_sc_act_title_2?smid=A3JWKAKR8XB7XF&psc=1
 https://www.amazon.de/gp/product/B07W4DGC27/ref=ox_sc_act_title_3?smid=A3JWKAKR8XB7XF&psc=1
-https://www.etsy.com/de/listing/1884499559/vertikaler-laptopstander-perfekt-fur?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=laptop+st%C3%A4nder&ref=sr_gallery-1-6&sts=1&local_signal_search=1&content_source=616660b9-a24a-4be6-981d-cb20aa90650c%253ALT0c995e414a7a31f4772fa2bea70f13e6a4f314b2&organic_search_click=1&logging_key=616660b9-a24a-4be6-981d-cb20aa90650c%3ALT0c995e414a7a31f4772fa2bea70f13e6a4f314b2
 https://www.amazon.de/gp/product/B07W5JHLCB/ref=ox_sc_act_title_4?smid=A3JWKAKR8XB7XF&psc=1
 https://www.amazon.de/-/en/Entfernungsmesser-LM50-Entfernungsmesse-Hintergrundbeleuchtung-Pythagoras/dp/B08G892B9W?dib=eyJ2IjoiMSJ9.Gheo0TVDwnsRkjyKhP4dOLJ2RZ_7f3vvn9SfWCuFMo_3oGEsaTNQDATwOw6ZTb5p0RnOjBa6mT9qdW3LeAnxV0H6uc1FQf95saWD0Y_Gd034omjLtW0jzz9NmdKkVLKzGO6pZOJJFhC2oTmzkWgrNPLRhdS3aQAe-37q2ouKUFa3IyjbrxPkW0BQTH1Jzl9gQ7gIOmxKDqxlqY0oCqdHngrBGl8aVv_hyPjxy5pEtwY.uNtyGOfrhdGhHL7hSRLjOUJXUeJROomoqVytDWuNynU&dib_tag=se&keywords=laser%2Bmessger%C3%A4t&qid=1750184288&sr=8-12&th=1
 https://www.amazon.de/-/en/Rangefinder-RockSeed-Measuring-Portable-Pythagorean/dp/B0863RK1KX?dib=eyJ2IjoiMSJ9.Gheo0TVDwnsRkjyKhP4dOLJ2RZ_7f3vvn9SfWCuFMo_3oGEsaTNQDATwOw6ZTb5p0RnOjBa6mT9qdW3LeAnxV0H6uc1FQf95saWD0Y_Gd034omjLtW0jzz9NmdKkVLKzGO6pZOJJFhC2oTmzkWgrNPLRhdS3aQAe-37q2ouKUFa3IyjbrxPkW0BQTH1Jzl9gQ7gIOmxKDqxlqY0oCqdHngrBGl8aVv_hyPjxy5pEtwY.uNtyGOfrhdGhHL7hSRLjOUJXUeJROomoqVytDWuNynU&dib_tag=se&keywords=laser%2Bmessger%C3%A4t&qid=1750184288&sr=8-1&th=1
 https://www.amazon.de/-/en/Professional-measure-memory-function-measuring/dp/B00R0Z7TFM?dib=eyJ2IjoiMSJ9.Gheo0TVDwnsRkjyKhP4dOLJ2RZ_7f3vvn9SfWCuFMo_3oGEsaTNQDATwOw6ZTb5p0RnOjBa6mT9qdW3LeAnxV0H6uc1FQf95saWD0Y_Gd034omjLtW0jzz9NmdKkVLKzGO6pZOJJFhC2oTmzkWgrNPLRhdS3aQAe-37q2ouKUFa3IyjbrxPkW0BQTH1Jzl9gQ7gIOmxKDqxlqY0oCqdHngrBGl8aVv_hyPjxy5pEtwY.uNtyGOfrhdGhHL7hSRLjOUJXUeJROomoqVytDWuNynU&dib_tag=se&keywords=laser%2Bmessger%C3%A4t&qid=1750184021&sr=8-4&th=1
+`
+
+var etsyLinksRaw = `
+https://www.etsy.com/de/listing/4311408001/1516-zoll-eleganter-moderner-laptop?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=laptop+st%C3%A4nder&ref=sr_gallery-1-24&local_signal_search=1&content_source=616660b9-a24a-4be6-981d-cb20aa90650c%253ALTfde0873dc95278fcadd0e34ecdb9ee1d4de94ca8&organic_search_click=1&logging_key=616660b9-a24a-4be6-981d-cb20aa90650c%3ALTfde0873dc95278fcadd0e34ecdb9ee1d4de94ca8
+https://www.etsy.com/de/listing/1884499559/vertikaler-laptopstander-perfekt-fur?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=laptop+st%C3%A4nder&ref=sr_gallery-1-6&sts=1&local_signal_search=1&content_source=616660b9-a24a-4be6-981d-cb20aa90650c%253ALT0c995e414a7a31f4772fa2bea70f13e6a4f314b2&organic_search_click=1&logging_key=616660b9-a24a-4be6-981d-cb20aa90650c%3ALT0c995e414a7a31f4772fa2bea70f13e6a4f314b2
 https://www.etsy.com/de/listing/4396295569/macbook-pro-macbook-air-stander-voronoy?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=laptop+st%C3%A4nder&ref=sr_gallery-1-30&pro=1&local_signal_search=1&content_source=616660b9-a24a-4be6-981d-cb20aa90650c%253ALTcf12362f516f7e0c7f4b8d4116965c6ef26440c4&organic_search_click=1&logging_key=616660b9-a24a-4be6-981d-cb20aa90650c%3ALTcf12362f516f7e0c7f4b8d4116965c6ef26440c4
 `
 
@@ -49,8 +52,11 @@ https://www.amazon.de/gp/product/B07W4DGC27
 https://www.amazon.de/gp/product/B07W5JHLCB
 https://www.amazon.de/dp/B08G892B9W
 https://www.amazon.de/dp/B0863RK1KX
-https://www.amazon.de/dp/B00R0Z7TFM
-`
+https://www.amazon.de/dp/B00R0Z7TFM`
+
+var etsyLinksReduced = `https://www.etsy.com/de/listing/4311408001
+https://www.etsy.com/de/listing/1884499559
+https://www.etsy.com/de/listing/4396295569`
 
 var randomOtherLinks = `https://go.dev/doc/tutorial/add-a-test
 https://go.dev/doc/diagnostics`
@@ -65,11 +71,25 @@ func Test_Replace_Should_Reduce_Content_With_Amazon_Links(t *testing.T) {
 	expectedResult := amazonLinksReduced
 
 	// act
-	result, err := ReduceAmazonUrls(input)
+	result, err := ReduceUrls(input)
 
 	// assert
 	if expectedResult != result || err != nil {
 		t.Fatalf(`ReplaceClipboardContent() = %q, %v. Expected result %#q, nil`, result, err, expectedResult)
+	}
+}
+
+func Test_Replace_Should_Reduce_Content_With_Etsy_Links(t *testing.T) {
+	// arrange
+	input := etsyLinksRaw
+	expectedResult := etsyLinksReduced
+
+	// act
+	result, err := ReduceUrls(input)
+
+	// assert
+	if expectedResult != result || err != nil {
+		t.Fatalf(`ReduceUrls() = %q, %v. Expected result %#q, nil`, result, err, expectedResult)
 	}
 }
 
@@ -79,7 +99,7 @@ func Test_Replace_Should_Reduce_Only_Amazon_Links_On_Mixed_Content(t *testing.T)
 	expectedResult := strings.Join([]string{amazonLinksReduced, randomOtherLinks}, "\n")
 
 	// act
-	result, err := ReduceAmazonUrls(input)
+	result, err := ReduceUrls(input)
 
 	// assert
 	if expectedResult != result || err != nil {
@@ -93,11 +113,84 @@ func Test_Replace_Should_Return_Input_On_Content_Without_Amazon_Links(t *testing
 	expectedResult := randomOtherLinks
 
 	// act
-	result, err := ReduceAmazonUrls(input)
+	result, err := ReduceUrls(input)
 
 	// assert
 	if expectedResult != result || err != nil {
 		t.Fatalf(`ReplaceClipboardContent() = %q, %v. Expected result %#q, nil`, result, err, expectedResult)
+	}
+}
+
+func Test_Replace_Should_Reduce_Mixed_Amazon_And_Etsy_Links(t *testing.T) {
+	// arrange
+	// Take 2 Amazon links and 2 Etsy links and mix them
+	amazonLines := strings.Split(strings.TrimSpace(amazonLinksRaw), "\n")
+	etsyLines := strings.Split(strings.TrimSpace(etsyLinksRaw), "\n")
+
+	// Create mixed input with Amazon[0], Etsy[0], Amazon[1], Etsy[1]
+	mixedInput := strings.Join([]string{
+		amazonLines[0],
+		etsyLines[0],
+		amazonLines[1],
+		etsyLines[1],
+	}, "\n")
+
+	// Create expected output in the same order
+	amazonReducedLines := strings.Split(strings.TrimSpace(amazonLinksReduced), "\n")
+	etsyReducedLines := strings.Split(strings.TrimSpace(etsyLinksReduced), "\n")
+
+	expectedResult := strings.Join([]string{
+		amazonReducedLines[0],
+		etsyReducedLines[0],
+		amazonReducedLines[1],
+		etsyReducedLines[1],
+	}, "\n")
+
+	// act
+	result, err := ReduceUrls(mixedInput)
+
+	// assert
+	if expectedResult != result || err != nil {
+		t.Fatalf(`ReduceUrls() = %q, %v. Expected result %#q, nil`, result, err, expectedResult)
+	}
+}
+
+func Test_Replace_Should_Reduce_Mixed_Content_With_Amazon_Etsy_And_Other_Links(t *testing.T) {
+	// arrange
+	// Take 2 Amazon, 2 Etsy, and 2 other links and mix them
+	amazonLines := strings.Split(strings.TrimSpace(amazonLinksRaw), "\n")
+	etsyLines := strings.Split(strings.TrimSpace(etsyLinksRaw), "\n")
+	otherLines := strings.Split(strings.TrimSpace(randomOtherLinks), "\n")
+
+	// Create mixed input
+	mixedInput := strings.Join([]string{
+		amazonLines[0],
+		otherLines[0],
+		etsyLines[0],
+		amazonLines[5],
+		etsyLines[1],
+		otherLines[1],
+	}, "\n")
+
+	// Create expected output in the same order
+	amazonReducedLines := strings.Split(strings.TrimSpace(amazonLinksReduced), "\n")
+	etsyReducedLines := strings.Split(strings.TrimSpace(etsyLinksReduced), "\n")
+
+	expectedResult := strings.Join([]string{
+		amazonReducedLines[0],
+		otherLines[0],
+		etsyReducedLines[0],
+		amazonReducedLines[5],
+		etsyReducedLines[1],
+		otherLines[1],
+	}, "\n")
+
+	// act
+	result, err := ReduceUrls(mixedInput)
+
+	// assert
+	if expectedResult != result || err != nil {
+		t.Fatalf(`ReduceUrls() = %q, %v. Expected result %#q, nil`, result, err, expectedResult)
 	}
 }
 

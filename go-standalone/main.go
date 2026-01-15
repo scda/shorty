@@ -7,29 +7,38 @@ import (
 	"golang.design/x/clipboard"
 )
 
-var regularExpression = regexp.MustCompile("((https?://(www|smile)?.?)?amazon.de/).*/?((dp|gp/product)/[^/^?]*)")
+var amazonRegex = regexp.MustCompile(`((https?://(www|smile)?.?)?amazon.de/).*/?((dp|gp/product)/[^/^?]*)`)
+var etsyRegex = regexp.MustCompile(`(https?://www\.etsy\.com/[^/]+/listing/[0-9]+)`)
 
-func ReduceAmazonUrls(input string) (string, error) {
+func ReduceUrls(input string) (string, error) {
 	results := []string{}
 	lines := strings.Split(input, "\n")
 
 	for _, line := range lines {
-		matches := regularExpression.FindStringSubmatch(line)
-
-		if matches == nil {
-			// fmt.Printf("No match found\n")
-			results = append(results, line)
+		// Skip empty lines
+		trimmedLine := strings.TrimSpace(line)
+		if trimmedLine == "" {
 			continue
 		}
 
-		// fmt.Printf("Found matches: `%q`\n", matches)
-		if matches == nil || len(matches) < 4 {
+		// Try Amazon regex first
+		amazonMatches := amazonRegex.FindStringSubmatch(line)
+		if len(amazonMatches) >= 5 {
+			reducedUrl := strings.Join([]string{amazonMatches[1], amazonMatches[4]}, "")
+			results = append(results, reducedUrl)
 			continue
 		}
 
-		reducedUrl := strings.Join([]string{matches[1], matches[4]}, "")
-		results = append(results, reducedUrl)
-		// fmt.Printf("reducedUrl: `%q`\n", reducedUrl)
+		// Try Etsy regex
+		etsyMatches := etsyRegex.FindStringSubmatch(line)
+		if len(etsyMatches) >= 1 {
+			reducedUrl := etsyMatches[1]
+			results = append(results, reducedUrl)
+			continue
+		}
+
+		// No match found, keep original line
+		results = append(results, line)
 	}
 
 	if results == nil {
@@ -54,7 +63,7 @@ func main() {
 	if clipboardContent == "" {
 		return
 	}
-	shortenedResultString, err := ReduceAmazonUrls(clipboardContent)
+	shortenedResultString, err := ReduceUrls(clipboardContent)
 	if err == nil && shortenedResultString != "" {
 		WriteClipboard(shortenedResultString)
 	}
